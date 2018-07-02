@@ -16,7 +16,7 @@
 		1A60F2F620EA3BF900E7C042 /* DisplayNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F520EA3BF900E7C042 /* DisplayNoteViewController.swift */; };
 		1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F720EA3C4000E7C042 /* ListNotesTableViewCell.swift */; };
 		1A60F2FA20EA3DE000E7C042 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F920EA3DE000E7C042 /* ListNotesTableViewController.swift */; };
-		1A60F2FC20EA58BC00E7C042 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2FB20EA58BC00E7C042 /* Notes.swift */; };
+		1A60F2FC20EA58BC00E7C042 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2FB20EA58BC00E7C042 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		1A60F2F520EA3BF900E7C042 /* DisplayNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNoteViewController.swift; sourceTree = "<group>"; };
 		1A60F2F720EA3C4000E7C042 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
 		1A60F2F920EA3DE000E7C042 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewController.swift; sourceTree = "<group>"; };
-		1A60F2FB20EA58BC00E7C042 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		1A60F2FB20EA58BC00E7C042 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		1A60F2E920EA393A00E7C042 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A60F2FB20EA58BC00E7C042 /* Notes.swift */,
+				1A60F2FB20EA58BC00E7C042 /* Note.swift */,
 				1A60F2D420EA390000E7C042 /* AppDelegate.swift */,
 				1A60F2DB20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld */,
 				1A60F2D820EA390000E7C042 /* Main.storyboard */,
@@ -192,7 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A60F2DD20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld in Sources */,
-				1A60F2FC20EA58BC00E7C042 /* Notes.swift in Sources */,
+				1A60F2FC20EA58BC00E7C042 /* Note.swift in Sources */,
 				1A60F2F420EA3BD400E7C042 /* Date+convertToString.swift in Sources */,
 				1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */,
 				1A60F2FA20EA3DE000E7C042 /* ListNotesTableViewController.swift in Sources */,
