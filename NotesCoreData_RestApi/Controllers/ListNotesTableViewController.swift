@@ -24,9 +24,10 @@ class ListNotesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! ListNotesTableViewCell
 
-        cell.textLabel?.text = "Cell Row - \(indexPath.row), Sectioin - \(indexPath.section)"
+        cell.informationLabel?.text = "note's title"
+        cell.modifiedTimeStampLabel.text = "note's modification time"
 
         return cell
     }
