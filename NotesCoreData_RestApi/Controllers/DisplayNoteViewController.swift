@@ -16,18 +16,13 @@ class DisplayNoteViewController : UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateTextView(param:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateTextView(param:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        contentTextView.layer.cornerRadius = 5
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        contentTextView.layer.cornerRadius = 7
         
         if let note = note {
             titleTextField.text = note.title
@@ -72,8 +67,8 @@ class DisplayNoteViewController : UIViewController {
     @objc func updateTextView(param: Notification) {
         let userInfo = param.userInfo
         
-        let getKeyBouardRect = (userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let keyBoardFrame = self.view.convert(getKeyBouardRect, to: view.window)
+        let getKeyBouarRect = (userInfo![UIKeyboardFrameEndUserInfoKey] as!NSValue).cgRectValue
+        let keyBoardFrame = self.view.convert(getKeyBouarRect, to: view.window)
         if param.name == Notification.Name.UIKeyboardWillHide {
             contentTextView.contentInset = UIEdgeInsets.zero
         } else {
