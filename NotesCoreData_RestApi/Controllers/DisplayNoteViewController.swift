@@ -19,8 +19,10 @@ class DisplayNoteViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTextView(param:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTextView(param:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         contentTextView.layer.cornerRadius = 5
-
         
     }
     
@@ -35,7 +37,11 @@ class DisplayNoteViewController : UIViewController {
             contentTextView.text = ""
         }
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        contentTextView.resignFirstResponder()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
@@ -60,6 +66,19 @@ class DisplayNoteViewController : UIViewController {
             
         default:
             print("unexpected segue identifier")
+        }
+    }
+    
+    @objc func updateTextView(param: Notification) {
+        let userInfo = param.userInfo
+        
+        let getKeyBouardRect = (userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyBoardFrame = self.view.convert(getKeyBouardRect, to: view.window)
+        if param.name == Notification.Name.UIKeyboardWillHide {
+            contentTextView.contentInset = UIEdgeInsets.zero
+        } else {
+            contentTextView.contentInset = UIEdgeInsetsMake(0, 0, keyBoardFrame.height, 0)
+            contentTextView.scrollRangeToVisible(contentTextView.selectedRange)
         }
     }
     
