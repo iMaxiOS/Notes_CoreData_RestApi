@@ -2,8 +2,8 @@
 //  CoreDataHelper.swift
 //  NotesCoreData_RestApi
 //
-//  Created by iMaxiOS on 7/2/18.
-//  Copyright © 2018 Maxim Granchenko. All rights reserved.
+//  Created by Oleg on 7/2/18.
+//  Copyright © 2018 Oleg Granchenko. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,11 @@ struct CoreDataHelper {
         
         return context
     }()
+    
+    static func note(with id: String) -> Note? {
+        let listNotes = retrieveNotes()
+        return listNotes.filter({$0.id == id}).first
+    }
     
     static func newNote() -> Note {
         let note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as! Note

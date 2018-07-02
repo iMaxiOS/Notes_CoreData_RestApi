@@ -17,6 +17,9 @@
 		1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F720EA3C4000E7C042 /* ListNotesTableViewCell.swift */; };
 		1A60F2FA20EA3DE000E7C042 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F920EA3DE000E7C042 /* ListNotesTableViewController.swift */; };
 		1A60F2FE20EA648C00E7C042 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2FD20EA648C00E7C042 /* CoreDataHelper.swift */; };
+		56A2FE8220EAAA9E0033419D /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2FE8120EAAA9E0033419D /* PersistencyManager.swift */; };
+		56A2FE8420EAAC3A0033419D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2FE8320EAAC3A0033419D /* Constant.swift */; };
+		56A2FE8620EAACCF0033419D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2FE8520EAACCF0033419D /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		1A60F2F720EA3C4000E7C042 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
 		1A60F2F920EA3DE000E7C042 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewController.swift; sourceTree = "<group>"; };
 		1A60F2FD20EA648C00E7C042 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		56A2FE8120EAAA9E0033419D /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		56A2FE8320EAAC3A0033419D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		56A2FE8520EAACCF0033419D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,12 @@
 		1A60F2D320EA390000E7C042 /* NotesCoreData_RestApi */ = {
 			isa = PBXGroup;
 			children = (
+				1A60F2D420EA390000E7C042 /* AppDelegate.swift */,
+				1A60F2DB20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld */,
+				1A60F2D820EA390000E7C042 /* Main.storyboard */,
+				1A60F2DE20EA390000E7C042 /* Assets.xcassets */,
+				1A60F2E020EA390000E7C042 /* LaunchScreen.storyboard */,
+				1A60F2E320EA390000E7C042 /* Info.plist */,
 				1A60F2EA20EA395B00E7C042 /* Helpers */,
 				1A60F2EB20EA398800E7C042 /* Extensions */,
 				1A60F2EC20EA399F00E7C042 /* Controllers */,
@@ -76,12 +88,6 @@
 		1A60F2E920EA393A00E7C042 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A60F2D420EA390000E7C042 /* AppDelegate.swift */,
-				1A60F2DB20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld */,
-				1A60F2D820EA390000E7C042 /* Main.storyboard */,
-				1A60F2DE20EA390000E7C042 /* Assets.xcassets */,
-				1A60F2E020EA390000E7C042 /* LaunchScreen.storyboard */,
-				1A60F2E320EA390000E7C042 /* Info.plist */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				1A60F2FD20EA648C00E7C042 /* CoreDataHelper.swift */,
+				56A2FE8120EAAA9E0033419D /* PersistencyManager.swift */,
+				56A2FE8320EAAC3A0033419D /* Constant.swift */,
+				56A2FE8520EAACCF0033419D /* APIManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -193,11 +202,14 @@
 			files = (
 				1A60F2DD20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld in Sources */,
 				1A60F2F420EA3BD400E7C042 /* Date+convertToString.swift in Sources */,
+				56A2FE8620EAACCF0033419D /* APIManager.swift in Sources */,
+				56A2FE8420EAAC3A0033419D /* Constant.swift in Sources */,
 				1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */,
 				1A60F2FE20EA648C00E7C042 /* CoreDataHelper.swift in Sources */,
 				1A60F2FA20EA3DE000E7C042 /* ListNotesTableViewController.swift in Sources */,
 				1A60F2D520EA390000E7C042 /* AppDelegate.swift in Sources */,
 				1A60F2F620EA3BF900E7C042 /* DisplayNoteViewController.swift in Sources */,
+				56A2FE8220EAAA9E0033419D /* PersistencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,9 +347,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/NotesCoreData_RestApi/Models/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NotesCoreData_RestApi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iMaxiOS.NotesCoreData-RestApi";
+				PRODUCT_BUNDLE_IDENTIFIER = "Oleg.NotesCoreData-RestApi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,9 +361,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/NotesCoreData_RestApi/Models/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NotesCoreData_RestApi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "iMaxiOS.NotesCoreData-RestApi";
+				PRODUCT_BUNDLE_IDENTIFIER = "Oleg.NotesCoreData-RestApi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

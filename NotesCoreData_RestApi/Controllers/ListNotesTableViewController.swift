@@ -2,8 +2,8 @@
 //  ListNotesTableViewController.swift
 //  NotesCoreData_RestApi
 //
-//  Created by iMaxiOS on 7/2/18.
-//  Copyright © 2018 Maxim Granchenko. All rights reserved.
+//  Created by Oleg on 7/2/18.
+//  Copyright © 2018 Oleg Granchenko. All rights reserved.
 //
 
 import UIKit
@@ -20,8 +20,22 @@ class ListNotesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        let _notes = CoreDataHelper.retrieveNotes()
+        if _notes.isEmpty {
+            PersistencyManager.shared.getAllNotes { [unowned self] in
+                DispatchQueue.main.async {
+                    self.notes = CoreDataHelper.retrieveNotes()
+                }
+            }
+        } else {
+            notes = _notes
+        }
+    }
+    
+    @IBAction func unwind(_segue: UIStoryboardSegue) {
         notes = CoreDataHelper.retrieveNotes()
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,8 +57,12 @@ class ListNotesTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwind(_segue: UIStoryboardSegue) {
-        notes = CoreDataHelper.retrieveNotes()
+    @IBAction func addNode() {
+        PersistencyManager.shared.addNode(title: "", info: "", completion: {
+            DispatchQueue.main.async {
+                self.notes = CoreDataHelper.retrieveNotes()
+            }
+        })
     }
     
     // MARK: - Table view data source
@@ -59,7 +77,8 @@ class ListNotesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! ListNotesTableViewCell
 
        let note = notes[indexPath.row]
-        cell.informationLabel.text = note.title
+        cell.idLabel.text = note.id
+        cell.informationLabel.text = note.content
         cell.modifiedTimeStampLabel.text = note.modificationTime?.convertToString() ?? "unknown"
 
         return cell
@@ -68,14 +87,11 @@ class ListNotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let noteToDelete = notes[indexPath.row]
-            CoreDataHelper.delete(note: noteToDelete)
-            
-            notes = CoreDataHelper.retrieveNotes()
+            PersistencyManager.shared.deleteNode(note: noteToDelete) { [unowned self] in
+                DispatchQueue.main.async {
+                    self.notes = CoreDataHelper.retrieveNotes()
+                }
+            }
         }
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
- 
 }

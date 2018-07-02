@@ -2,16 +2,15 @@
 //  DisplayNoteViewController.swift
 //  NotesCoreData_RestApi
 //
-//  Created by iMaxiOS on 7/2/18.
-//  Copyright © 2018 Maxim Granchenko. All rights reserved.
+//  Created by Oleg on 7/2/18.
+//  Copyright © 2018 Oleg Granchenko. All rights reserved.
 //
 
 import UIKit
 
 class ListNotesTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var modifiedTimeStampLabel: UILabel!
-    
-    
 }
