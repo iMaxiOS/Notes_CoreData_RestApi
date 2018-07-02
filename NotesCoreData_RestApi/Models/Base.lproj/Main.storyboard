@@ -18,13 +18,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J5Y-H2-DZp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="J5Y-H2-DZp" customClass="ListNotesTableViewCell" customModule="NotesCoreData_RestApi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J5Y-H2-DZp" id="5Q0-tT-2Uo">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lzw-aO-JO1">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kQ7-eK-J9s">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-NO-0ZL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Last Modified Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGC-yg-BeM">
+                                                            <rect key="frame" x="0.0" y="22" width="345" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="0.69792187210000001" green="0.73334258789999995" blue="0.76842910050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="QGC-yg-BeM" firstAttribute="height" secondItem="ewL-NO-0ZL" secondAttribute="height" id="9Op-Q0-Pnl"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Lzw-aO-JO1" secondAttribute="trailing" constant="15" id="8jq-1K-Zz2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Lzw-aO-JO1" secondAttribute="bottom" id="ETs-Uj-GaU"/>
+                                        <constraint firstItem="Lzw-aO-JO1" firstAttribute="top" secondItem="5Q0-tT-2Uo" secondAttribute="top" id="NYL-Zw-Ayu"/>
+                                        <constraint firstItem="Lzw-aO-JO1" firstAttribute="leading" secondItem="5Q0-tT-2Uo" secondAttribute="leading" constant="15" id="iao-rj-htw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="informationLabel" destination="ewL-NO-0ZL" id="zjJ-I1-Thn"/>
+                                    <outlet property="modifiedTimeStampLabel" destination="QGC-yg-BeM" id="ChE-Vr-yN0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
