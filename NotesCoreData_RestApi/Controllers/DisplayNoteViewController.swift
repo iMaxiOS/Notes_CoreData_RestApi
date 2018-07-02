@@ -8,7 +8,6 @@
 
 
 import UIKit
-import CoreData
 
 class DisplayNoteViewController : UIViewController {
     
@@ -19,6 +18,8 @@ class DisplayNoteViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contentTextView.layer.cornerRadius = 5
 
         
     }

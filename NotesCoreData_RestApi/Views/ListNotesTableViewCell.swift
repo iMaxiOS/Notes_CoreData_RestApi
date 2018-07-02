@@ -13,4 +13,5 @@ class ListNotesTableViewCell: UITableViewCell {
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var modifiedTimeStampLabel: UILabel!
     
+    
 }
