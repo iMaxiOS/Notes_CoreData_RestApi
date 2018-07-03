@@ -17,10 +17,8 @@ class APIManager {
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if response != nil, let data = data {
+            if error == nil, let data = data {
                 complition(data)
-            } else {
-                print(error)
             }
         }
         
@@ -36,10 +34,8 @@ class APIManager {
         request.httpBody = "{\n  \"title\": \"\(title), \"info\": \"\(info)\n}".data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if response != nil, let data = data {
+            if error == nil, let data = data {
                 complition(data)
-            } else {
-                print(error)
             }
         }
         
@@ -51,10 +47,8 @@ class APIManager {
         let request = URLRequest(url: url)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if response != nil, let data = data {
+            if error == nil, let data = data {
                 complition(data)
-            } else {
-                print(error)
             }
         }
         
@@ -67,10 +61,8 @@ class APIManager {
         request.httpMethod = "PUT"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if response != nil, let data = data {
+            if error == nil, let data = data {
                complition(data)
-            } else {
-                print(error)
             }
         }
         task.resume()
@@ -85,9 +77,7 @@ class APIManager {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if error == nil {
                 completion()
-            } else {
-                print(error)
-            }
+            } 
         }
         
         task.resume()

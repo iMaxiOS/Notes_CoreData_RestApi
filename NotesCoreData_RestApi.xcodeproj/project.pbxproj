@@ -17,6 +17,9 @@
 		1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F720EA3C4000E7C042 /* ListNotesTableViewCell.swift */; };
 		1A60F2FA20EA3DE000E7C042 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F920EA3DE000E7C042 /* ListNotesTableViewController.swift */; };
 		1A60F2FE20EA648C00E7C042 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2FD20EA648C00E7C042 /* CoreDataHelper.swift */; };
+		434D550020EB68A8004F0EF1 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D54FF20EB68A8004F0EF1 /* LanguageManager.swift */; };
+		434D550220EB6B32004F0EF1 /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D550120EB6B32004F0EF1 /* Notifier.swift */; };
+		434D550420EB6D7C004F0EF1 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D550320EB6D7C004F0EF1 /* String+Ext.swift */; };
 		56A2FE8220EAAA9E0033419D /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2FE8120EAAA9E0033419D /* PersistencyManager.swift */; };
 		56A2FE8420EAAC3A0033419D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2FE8320EAAC3A0033419D /* Constant.swift */; };
 		56A2FE8620EAACCF0033419D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A2FE8520EAACCF0033419D /* APIManager.swift */; };
@@ -35,6 +38,9 @@
 		1A60F2F720EA3C4000E7C042 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
 		1A60F2F920EA3DE000E7C042 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewController.swift; sourceTree = "<group>"; };
 		1A60F2FD20EA648C00E7C042 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		434D54FF20EB68A8004F0EF1 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		434D550120EB6B32004F0EF1 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
+		434D550320EB6D7C004F0EF1 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		56A2FE8120EAAA9E0033419D /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		56A2FE8320EAAC3A0033419D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		56A2FE8520EAACCF0033419D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 				56A2FE8120EAAA9E0033419D /* PersistencyManager.swift */,
 				56A2FE8320EAAC3A0033419D /* Constant.swift */,
 				56A2FE8520EAACCF0033419D /* APIManager.swift */,
+				434D54FF20EB68A8004F0EF1 /* LanguageManager.swift */,
+				434D550120EB6B32004F0EF1 /* Notifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1A60F2F320EA3BD400E7C042 /* Date+convertToString.swift */,
+				434D550320EB6D7C004F0EF1 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,12 +210,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A60F2DD20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld in Sources */,
+				434D550220EB6B32004F0EF1 /* Notifier.swift in Sources */,
 				1A60F2F420EA3BD400E7C042 /* Date+convertToString.swift in Sources */,
+				434D550420EB6D7C004F0EF1 /* String+Ext.swift in Sources */,
 				56A2FE8620EAACCF0033419D /* APIManager.swift in Sources */,
 				56A2FE8420EAAC3A0033419D /* Constant.swift in Sources */,
 				1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */,
 				1A60F2FE20EA648C00E7C042 /* CoreDataHelper.swift in Sources */,
 				1A60F2FA20EA3DE000E7C042 /* ListNotesTableViewController.swift in Sources */,
+				434D550020EB68A8004F0EF1 /* LanguageManager.swift in Sources */,
 				1A60F2D520EA390000E7C042 /* AppDelegate.swift in Sources */,
 				1A60F2F620EA3BF900E7C042 /* DisplayNoteViewController.swift in Sources */,
 				56A2FE8220EAAA9E0033419D /* PersistencyManager.swift in Sources */,

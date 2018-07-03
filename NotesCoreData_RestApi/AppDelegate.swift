@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  NotesCoreData_RestApi
 //
-//  Created by Oleg on 7/2/18.
+//  Created by Oleg Granchenko on 7/2/18.
 //  Copyright © 2018 Oleg Granchenko. All rights reserved.
 //
 
@@ -35,7 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        let deviceLocale = String(Locale.preferredLanguages[0].prefix(2))
+        if !deviceLocale.isEmpty {
+            LanguageManager.sharedInstance.locale = deviceLocale
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

@@ -2,7 +2,7 @@
 //  DisplayNoteViewController.swift
 //  NotesCoreData_RestApi
 //
-//  Created by Oleg on 7/2/18.
+//  Created by Oleg Granchenko on 7/2/18.
 //  Copyright © 2018 Oleg Granchenko. All rights reserved.
 //
 
