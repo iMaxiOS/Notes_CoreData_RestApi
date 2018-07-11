@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A60F2D520EA390000E7C042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2D420EA390000E7C042 /* AppDelegate.swift */; };
 		1A60F2DA20EA390000E7C042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A60F2D820EA390000E7C042 /* Main.storyboard */; };
-		1A60F2DD20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2DB20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld */; };
 		1A60F2DF20EA390000E7C042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A60F2DE20EA390000E7C042 /* Assets.xcassets */; };
 		1A60F2E220EA390000E7C042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A60F2E020EA390000E7C042 /* LaunchScreen.storyboard */; };
 		1A60F2F420EA3BD400E7C042 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F2F320EA3BD400E7C042 /* Date+convertToString.swift */; };
@@ -23,7 +22,6 @@
 		1A60F2D120EA390000E7C042 /* NotesCoreData_RestApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesCoreData_RestApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A60F2D420EA390000E7C042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A60F2D920EA390000E7C042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1A60F2DC20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesCoreData_RestApi.xcdatamodel; sourceTree = "<group>"; };
 		1A60F2DE20EA390000E7C042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A60F2E120EA390000E7C042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A60F2E320EA390000E7C042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			children = (
 				1A60F2FB20EA58BC00E7C042 /* Note.swift */,
 				1A60F2D420EA390000E7C042 /* AppDelegate.swift */,
-				1A60F2DB20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld */,
 				1A60F2D820EA390000E7C042 /* Main.storyboard */,
 				1A60F2DE20EA390000E7C042 /* Assets.xcassets */,
 				1A60F2E020EA390000E7C042 /* LaunchScreen.storyboard */,
@@ -191,7 +188,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A60F2DD20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld in Sources */,
 				1A60F2FC20EA58BC00E7C042 /* Note.swift in Sources */,
 				1A60F2F420EA3BD400E7C042 /* Date+convertToString.swift in Sources */,
 				1A60F2F820EA3C4000E7C042 /* ListNotesTableViewCell.swift in Sources */,
@@ -380,19 +376,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1A60F2DB20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1A60F2DC20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodel */,
-			);
-			currentVersion = 1A60F2DC20EA390000E7C042 /* NotesCoreData_RestApi.xcdatamodel */;
-			path = NotesCoreData_RestApi.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1A60F2C920EA390000E7C042 /* Project object */;
 }
